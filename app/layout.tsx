@@ -3,25 +3,28 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.contractocean.com'),
-  title: 'Contract Ocean — AI-Powered Contract Management Platform',
+  title: 'Contract Ocean — AI Contract Creation & Signing Platform',
   description:
-    'Create, send, sign, and improve contracts in one smart workspace. AI-powered contract generation, e-signatures, templates, and performance analytics for modern businesses.',
+    'Create, send, sign, and track contracts in one place. Contract Ocean helps modern businesses move faster with AI-powered workflows.',
   openGraph: {
-    title: 'Contract Ocean — AI-Powered Contract Management Platform',
+    title: 'Contract Ocean — AI Contract Creation & Signing Platform',
     description:
-      'Create, send, sign, and improve contracts in one smart workspace. AI contract generation, e-signatures, and analytics.',
+      'Create, send, sign, and track contracts in one place. Contract Ocean helps modern businesses move faster with AI-powered workflows.',
     type: 'website',
-    url: 'https://contractocean.com',
+    url: 'https://www.contractocean.com',
     images: ['/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contract Ocean — AI-Powered Contract Management',
+    title: 'Contract Ocean — AI Contract Creation & Signing Platform',
     description:
-      'Create, send, sign, and improve contracts in one smart workspace.',
+      'Create, send, sign, and track contracts in one place. Contract Ocean helps modern businesses move faster with AI-powered workflows.',
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/favicon.svg',
   },
 };
 
@@ -32,6 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+      </head>
       <body className="min-h-screen bg-white font-sans antialiased overflow-x-hidden">
         {children}
       </body>
